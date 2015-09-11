@@ -13,6 +13,11 @@ namespace ConsoleApplication2
             //create delegate instance(objects)
             NumberChanger nc1 = new NumberChanger(addNum);
             NumberChanger nc2 = new NumberChanger(multNum);
+            NumberChanger nc;
+            nc = nc1;
+            nc += nc2;
+            nc(5); //10+5=15  15*5=75
+            Console.WriteLine("value of: {0}", getNum());
             //call method through delegate
             nc1(25);
             Console.WriteLine("value of: {0}", getNum());
